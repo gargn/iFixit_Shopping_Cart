@@ -1,0 +1,49 @@
+html {
+	background: #eeeeee;
+}
+
+body {
+	font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.4em;
+	background: #eeeeee;
+	color: #333333;
+}
+
+#database {
+	width: 480px;
+	margin: 0 auto 30px auto;
+	background: white;
+	padding: 20px;
+	
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+	-o-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+}
+	#database .title h1 {
+		font-size: 36px;
+		font-weight: bold;
+		text-align: center;
+		padding: 20px 0 30px 0;
+		line-height: 1;
+	}
+
+#instructions {
+  width: 520px;
+  margin: 10px auto;
+  color: #777777;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+  text-align: center;
+}
+
+#credits {
+  width: 520px;
+  margin: 30px auto;
+  color: #999999;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+  text-align: center;
+}
+	#credits a {
+	  color: #888888;
+	}
