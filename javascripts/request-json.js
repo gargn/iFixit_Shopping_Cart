@@ -8,8 +8,8 @@ window.addEvent('domready', function() {
 			callbackKey: "jsonp",
 			
 			data: {
-				offset: "1",
-				limit: "5",
+				offset: "0",
+				limit: "15",
 			},
 			
 			onRequest: function() {
@@ -20,6 +20,7 @@ window.addEvent('domready', function() {
                 Array.each(data, function(dev){
 					var devName = dev.device;
 					var urlName = url.concat(devName.replace(new RegExp(" ","g"), "+"));
+					devName = toTitleCase(devName);
 					
 					var jsonRequest = new Request.JSONP({
 						url: urlName,
@@ -34,13 +35,14 @@ window.addEvent('domready', function() {
 							},
 							
 							onComplete: function(data){
-								//document.getElementById('items').style.backgroundImage = "url('"+ data.image.text +".thumbnail')";
 								console.log(devName);
 								console.log(urlName);
 								console.log(data.image.text);
 								
-								var element = new Element('div', {'class': 'items'});
-                                element.set('html','<span style="font-size:12px">'+devName+'</span>');
+								var element = new Element('div', {'class': 'item'});
+								element.setStyle('background-image',"url('"+ data.image.text +".thumbnail')");
+								element.setStyle('width',150+'px');
+								element.set('html','<span style="font-size:12px">'+devName+'</span>');
 								element.inject($('items'));
 							},
 							
@@ -56,3 +58,9 @@ window.addEvent('domready', function() {
 		}).send();
 		
 })
+
+// Capitalize titles
+function toTitleCase(str)
+{
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}

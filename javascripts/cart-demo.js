@@ -7,9 +7,9 @@ window.addEvent('load', function(){
 		
 		console.log("mousedown cart-demo");
 		
- 		var shirt = this;
+ 		var obj = this;
 		
-		var clone = shirt.clone().setStyles(shirt.getCoordinates()).setStyles({
+		var clone = obj.clone().setStyles(obj.getCoordinates()).setStyles({
 			opacity: 0.7,
 			position: 'absolute'
 		}).inject(document.body);
@@ -23,7 +23,7 @@ window.addEvent('load', function(){
 				dragging.destroy();
 				
 				if (cart != null){
-					shirt.clone().inject(cart);
+					obj.clone().inject(cart);
 					cart.highlight('#7389AE', '#FFF');
 				}
 			},
