@@ -14,6 +14,7 @@
 		
 		<script language="javascript" src="javascripts/request-json.js" type="text/javascript"></script>
 		<script language="javascript" src="javascripts/cart-demo.js" type="text/javascript"></script>
+		<script language="javascript" src="javascripts/localStorage.js" type="text/javascript"></script>
 	</head>
 		
 	<body>
@@ -24,7 +25,11 @@
 		</div>
 		
 		<ul id='instructions'>
-		  Drag items you own into your cart for future reference.
+			Drag items you own into your cart for future reference. </br>
+			
+			<a href="#" id="prev" onclick="processNeg()">&lt;</a> 
+			<span id="pageNavPosition"></span> 
+			<a href="#" id="next" onclick="processPos()">&gt;</a><br />
 		</ul>
 		
 		<div id="items">
@@ -33,6 +38,6 @@
 		<div id="cart">
 			<div class="info">Drag Personal Items Here</div>
 		</div>
-		
+				
 	</body>
 </html>

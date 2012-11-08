@@ -1,7 +1,13 @@
 window.addEvent('load', function(){
-	
-	console.log("in cart-demo");
-	
+	addDrag();
+});
+
+function callDrag(){
+	addDrag();
+	console.log("in call-drag");
+}
+
+function addDrag (){	
 	$$('.item').addEvent('mousedown', function(event){
 		event.stop();
 		
@@ -42,5 +48,4 @@ window.addEvent('load', function(){
 		});
 		drag.start(event);
 	});
-
-});
+}
